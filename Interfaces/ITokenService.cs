@@ -1,4 +1,4 @@
-using codegym_api.Models;
+using codegym_api.Entities;
 
 namespace codegym_api.Interfaces;
 

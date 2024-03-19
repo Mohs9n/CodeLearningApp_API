@@ -1,14 +1,22 @@
-using codegym_api.Extensions;
+using codegym_api.Data;
+using codegym_api.Interfaces;
+using codegym_api.Services;
+using codegym_api.Entities;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-builder.Services.AddApplicationServices(builder.Configuration);
-builder.Services.AddIdentityServices(builder.Configuration);
+builder.Services.AddAuthorization();
 
+builder.Services.AddIdentityApiEndpoints<User>()
+    .AddEntityFrameworkStores<DataContext>();
 
+builder.Services.AddDbContext<DataContext>(opts => opts.UseSqlite("Data source=codegym.db"));
+
+builder.Services.AddScoped<ICodeExecutionService, CodeExecutionService>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -26,6 +34,7 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+app.MapIdentityApi<User>();
 app.MapControllers();
 
 app.Run();

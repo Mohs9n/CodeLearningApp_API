@@ -1,0 +1,36 @@
+{
+  "FormattingOptions": {
+    "EnableEditorConfigSupport": true
+    "OrganizeImports": true,
+    "NewLine": "\n",
+    "UseTabs": false,
+    "TabSize": 4,
+    "IndentationSize": 4,
+    "IndentBraces": false,
+    "IndentBlock": true,
+    "IndentSwitchSection": true,
+    "IndentSwitchCaseSection": true,
+    "IndentSwitchCaseSectionWhenBlock": true,
+    "WrappingPreserveSingleLine": true,
+    "WrappingKeepStatementsOnSingleLine": true,
+  },
+  "RoslynExtensionsOptions": {
+    "enableImportCompletion": true,
+    "enableAnalyzersSupport": true,
+    "diagnosticWorkersThreadCount": 12
+  },
+  "inlayHintsOptions": {
+    "enableForParameters": true,
+    "forLiteralParameters": true,
+    "forIndexerParameters": true,
+    "forObjectCreationParameters": true,
+    "forOtherParameters": true,
+    "suppressForParametersThatDifferOnlyBySuffix": false,
+    "suppressForParametersThatMatchMethodIntent": false,
+    "suppressForParametersThatMatchArgumentName": false,
+    "enableForTypes": true,
+    "forImplicitVariableTypes": false,
+    "forLambdaParameterTypes": true,
+    "forImplicitObjectCreation": true
+  }
+}
