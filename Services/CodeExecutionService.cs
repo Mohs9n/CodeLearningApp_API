@@ -35,7 +35,7 @@ public class CodeExecutionService : ICodeExecutionService
         Console.WriteLine(outputVariable);
 
         // Optional: Delete the temporary file
-        // File.Delete(filename);
+        File.Delete(filename);
         return outputVariable;
     }
 }
