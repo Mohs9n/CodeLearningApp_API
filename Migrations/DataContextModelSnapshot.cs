@@ -176,7 +176,7 @@ namespace codegym_api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Articles");
+                    b.ToTable("Articles", (string)null);
                 });
 
             modelBuilder.Entity("codegym_api.Entities.DoneArticle", b =>
@@ -196,7 +196,7 @@ namespace codegym_api.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("DoneArticles");
+                    b.ToTable("DoneArticles", (string)null);
                 });
 
             modelBuilder.Entity("codegym_api.Entities.LoginDay", b =>
@@ -216,7 +216,7 @@ namespace codegym_api.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("LoginDays");
+                    b.ToTable("LoginDays", (string)null);
                 });
 
             modelBuilder.Entity("codegym_api.Entities.Submission", b =>
@@ -246,7 +246,7 @@ namespace codegym_api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Submissions");
+                    b.ToTable("Submissions", (string)null);
                 });
 
             modelBuilder.Entity("codegym_api.Entities.User", b =>
